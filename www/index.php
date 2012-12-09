@@ -47,6 +47,13 @@ echo $contents; } ?>
 
 <p>For more information contact dyedp39@yahoo.com </p>
 <p>To use the code in this project you must first load the tseries , and quantmod librarys.</p>
+<p>Then source these files in the sequence shown.</p>
+<p>1 symbolReturn.R</p>
+<p>2 symFundloop.R</p>
+<p>3 5_sym_portfolio.R    </p>
+<p>This loads two functions and uses them to create a example portfolio. </p>
+<p>your wokspace will contain optimum portfolio r.</p>
+<p>r$pw is the theorectial idea weights for each symbol in the fund. </p>
 <p>&nbsp;</p>
 </body>
 </html>
