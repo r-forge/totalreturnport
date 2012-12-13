@@ -17,11 +17,11 @@ ief.dividends <- data.frame(date=ief.dividends.date,div=ief.div)
 #requires library tseries
 library('tseries')
 library('quantmod')
-ief.price.days <-get.hist.quote(fund,start=first,quote="Close")
+ief.price.days <-get.hist.quote(fund,start=first,quote="AdjClose")
 
 ief.price.days <-data.frame(ief.price.days)
 ief.price.days.date <- as.Date(rownames(ief.price.days))
-ief.price.days.close <- as.numeric(ief.price.days$Close)
+ief.price.days.close <- as.numeric(ief.price.days$AdjClose)
 ief.price.days.df <- data.frame(date=ief.price.days.date,price=ief.price.days.close)
 #we now have a data frame with two columns. Date and closing price
 #combine price and dividends into a single data frame
