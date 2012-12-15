@@ -30,7 +30,9 @@ ief <- merge(ief.price.days.df,ief.dividends,all.x=TRUE)
 ief$div[is.na(ief$div)] <- 0  #change NA to zero
 n<- length(ief$price)
 #calculate daily total return. combin dividende and change in price to determine total return
-return <- (ief$div[-1]+ ief$price[-1])/ief$price[-n]
+#return <- (ief$div[-1]+ ief$price[-1])/ief$price[-n] 
+#take dividends out
+return <- (ief$price[-1]/ief$price[-n])
 #add retun column 
 ief.return <-cbind(ief[-1,],return)#eliminate 1st row
 
